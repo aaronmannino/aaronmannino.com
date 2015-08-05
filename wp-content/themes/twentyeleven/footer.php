@@ -10,23 +10,23 @@
  */
 ?>
 
-	</div><!-- #main -->
+    </div><!-- #main -->
 
-	<footer id="colophon" role="contentinfo">
+    <footer id="colophon" role="contentinfo">
 
-			<?php
-				/* A sidebar in the footer? Yep. You can can customize
-				 * your footer with three columns of widgets.
-				 */
-				if ( ! is_404() )
-					get_sidebar( 'footer' );
-			?>
+            <?php
+                /* A sidebar in the footer? Yep. You can can customize
+                 * your footer with three columns of widgets.
+                 */
+                if ( ! is_404() )
+                    get_sidebar( 'footer' );
+            ?>
 
-			<div id="site-generator">
-				<?php do_action( 'twentyeleven_credits' ); ?>
-			    <a href="http://www.andapartridge.com/" title="And A Partridge">Site by And A Partridge</a>
-			</div>
-	</footer><!-- #colophon -->
+            <div id="site-generator">
+                <?php do_action( 'twentyeleven_credits' ); ?>
+                <a href="<?php echo esc_url( __( 'http://www.andapartridge.com/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'And A Partridge', 'twentyeleven' ); ?>"><?php printf( __( 'Site by %s', 'twentyeleven' ), 'And A Partridge' ); ?></a>
+            </div>
+    </footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
